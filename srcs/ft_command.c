@@ -6,7 +6,7 @@
 /*   By: mjacques <mjacques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 23:58:44 by mjacques          #+#    #+#             */
-/*   Updated: 2018/11/11 13:28:00 by mjacques         ###   ########.fr       */
+/*   Updated: 2019/03/06 20:49:19 by mjacques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,9 @@ static void	ft_execute_cmd(char *path, char **ptr, int *ret)
 		exit(execve(path, ptr, g_envp));
 	else if (pid < 0)
 		ft_putendl("ERROR: fork() failed");
+	signal(SIGINT, SIG_IGN);
 	waitpid(pid, ret, WUNTRACED);
+	signal(SIGINT, SIG_DFL);
 	(ft_strcmp(path, ptr[0])) ? ft_strdel(&path) : NULL;
 }
 
