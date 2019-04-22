@@ -3,7 +3,31 @@
 
 ## Summary
 Team 4-5 person team recreation of the bash shell.
-## Allowed functions:
-`malloc`, `open`, `read`, `access`, `ttyname`, `...`, `termcaps library`.
+
+## Screenshot
+
+![42sh Example](https://github.com/hongfu12321/unix_shell/blob/master/img/Screenshot.png)
+
+## Mandatory part:
+- Prompt without line edition.
+- Builtins `cd`, `echo`, `exit`, `env`, `setenv`, `unsetenv` with there options.
+- Executing simple commands with there parameters using `PATH`.
+- Support for redirection `>`, `>>`, `<`and `|`.
+- Logical operand `&&`and `||`.
+- Separator `;`.
+
+## Optional feature:
+- Inhibitors `"`, `'`and `\`.
+- Advanced redirections: aggregation of file output and heredoc `<<`.
+- Backquotes \`.
+- Subshell with operand `()`.
+- Local variable and builtin `unset` and `export`.
+- History command with flags -c, -a, -r, -h
+
 ## Keywords
 C language, team, optimization, bash shell, memory management, C-Unix command execution.
+
+## Authors
+* **Fu Hong** [hongfu12321](https://github.com/hongfu12321)
+* **Maxence Jacques de Dixmude** [maxencejded](https://github.com/maxencejded)
+* **Matt Carney** [mecarney](https://github.com/PurpleBooth)
